@@ -1,0 +1,30 @@
+.register__wrapper {
+  display: flex;
+  font-size: 20px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  flex-direction: column;
+  width: 400px;
+  height: 100%;
+  background-color: #f2f2f2;
+  margin: 50px auto;
+  padding: 70px 20px;
+  border-radius: 15px;
+}
+.register_btn {
+  margin-top: 50px;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+.register_btn:hover {
+  opacity: 0.7;
+}
+
+.register_btn:active {
+  opacity: 0.3;
+}
