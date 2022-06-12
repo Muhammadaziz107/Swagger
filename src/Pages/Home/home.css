@@ -1,0 +1,10 @@
+.home__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.home__heading {
+  font-size: 40px;
+  margin: 0 auto;
+  font-family: "Arial", serif;
+}

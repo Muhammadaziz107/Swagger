@@ -9,6 +9,7 @@
   margin: 50px auto;
   padding: 70px 20px;
   border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .register_btn {
   margin-top: 50px;

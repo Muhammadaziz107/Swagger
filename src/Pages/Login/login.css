@@ -9,6 +9,7 @@
   margin: 100px auto;
   padding: 70px 20px;
   border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .welcome {

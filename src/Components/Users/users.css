@@ -1,0 +1,40 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.users__wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.allUsers {
+  z-index: 100;
+  margin-left: 420px;
+  margin-top: 20px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+
+.allUsers-info {
+  text-align: center;
+  font-size: 25px;
+  font-family: "Arial", serif;
+}
+
+.fixed_navbar {
+  position: fixed;
+}

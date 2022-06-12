@@ -1,9 +1,36 @@
 import "./login.css";
-import { NavLink } from "react-router-dom";
-import { useRef } from "react";
+import { NavLink, useParams } from "react-router-dom";
+import { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
 const Login = () => {
+  const [data, setData] = useState([]);
+  const { id } = useParams();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch(
+        `https://online-excel-heroku.herokuapp.com/auth/get/${id}`,
+        {
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (res.status == 200) {
+        const request = await res.json();
+        const data = request.data.data;
+        setData(data);
+      }
+    };
+
+    fetchData();
+  });
+
+  // ======
+
   const elUserName = useRef(null);
   const elPassword = useRef(null);
 
@@ -29,7 +56,6 @@ const Login = () => {
         const { data } = await res.json();
 
         const token = data.data.accessToken;
-
         window.localStorage.setItem("token", JSON.stringify(token));
         navigate("/");
       }
@@ -44,11 +70,18 @@ const Login = () => {
         <h2 className="welcome">Sign in</h2>
 
         <form action="" method="post" className="login__form" onSubmit={handleLogin}>
-          <input ref={elUserName} className="input" type="text" placeholder="Username" />
+          <input
+            required
+            ref={elUserName}
+            className="input"
+            type="text"
+            placeholder="Username"
+          />
           <input
             ref={elPassword}
             className="input"
             type="password"
+            required
             placeholder="Password"
           />
           <button className="login_btn" type="submit">
