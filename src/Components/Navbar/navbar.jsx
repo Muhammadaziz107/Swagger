@@ -68,14 +68,6 @@ function Navbar() {
               </NavLink>
             </li>
             <span className="line"></span>
-
-            <li className="navbar__nav__list__item">
-              <NavLink to="/api/settings" className="navbar__nav__list__item__link">
-                <img src={settings} alt="users img" width="20" height="20" />
-                <p className="navbar__nav__list__item__link__text">Settings</p>
-              </NavLink>
-            </li>
-            <span className="line"></span>
           </ul>
         </nav>
       </div>
