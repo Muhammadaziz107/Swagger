@@ -6,6 +6,7 @@ import Login from "./Pages/Login/login";
 import Home from "./Pages/Home/home";
 import Register from "./Pages/Register/register";
 import Users from "./Components/Users/users";
+import Students from "./Components/Students/students";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/api/users" element={<Users />} />
+        <Route path="/api/students" element={<Students />} />
       </Routes>
     </div>
   );

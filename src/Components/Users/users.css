@@ -1,14 +1,16 @@
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 1000px;
+  border: 1px solid #dddddd;
 }
 
 td,
 th {
+  /* z-index: 10; */
   border: 1px solid #dddddd;
   text-align: left;
-  padding: 8px;
+  padding: 25px 8px;
 }
 
 tr:nth-child(even) {
@@ -22,7 +24,7 @@ tr:nth-child(even) {
 }
 
 .allUsers {
-  z-index: 100;
+  /* z-index: 10; */
   margin-left: 420px;
   margin-top: 20px;
   margin-right: 50px;
@@ -37,4 +39,102 @@ tr:nth-child(even) {
 
 .fixed_navbar {
   position: fixed;
+}
+
+.open-modal {
+  padding: 10px 40px;
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-right: -70px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border-radius: 20px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.open-modal:hover {
+  opacity: 0.7;
+}
+
+.open-modal:active {
+  opacity: 0.3;
+}
+
+.button-td {
+  padding: 0;
+}
+
+.user_modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.user_modal__wrapper {
+  z-index: 1000;
+  width: 30%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #888;
+  background-color: #fefefe;
+}
+
+.user_modal__heading-box {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Arial", serif;
+}
+
+.user_modal__body {
+  font-size: 12px;
+  font-family: "Arial", serif;
+}
+.btn-box {
+  width: 100px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.user-delete-btn {
+  width: 170px;
+  padding: 12px 55px;
+  background-color: #e65b65;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  margin-left: -30px;
+}
+
+.user-delete-btn:hover {
+  opacity: 0.8;
+}
+.user-delete-btn:active {
+  opacity: 0.4;
+}
+
+.modal--active {
+  display: block;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.password-user {
+  font-size: 12px;
 }

@@ -6,6 +6,7 @@ import { useNavigate } from "react-router";
 const Login = () => {
   const [data, setData] = useState([]);
   const { id } = useParams();
+  const elMessage = useRef(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -58,6 +59,8 @@ const Login = () => {
         const token = data.data.accessToken;
         window.localStorage.setItem("token", JSON.stringify(token));
         navigate("/");
+      } else {
+        elMessage.current.textContent = "Something went wrong!!!";
       }
     } catch (err) {
       console.log(err);
@@ -84,6 +87,8 @@ const Login = () => {
             required
             placeholder="Password"
           />
+
+          <h3 ref={elMessage}></h3>
           <button className="login_btn" type="submit">
             Sign in
           </button>
